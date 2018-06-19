@@ -132,17 +132,19 @@ namespace newcounter.newcounter_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
-            _typeNameTable[0] = "newcounter.info";
+            _typeNameTable = new string[5];
+            _typeNameTable[0] = "newcounter.agonia";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "newcounter.MainPage";
+            _typeNameTable[3] = "newcounter.info";
+            _typeNameTable[4] = "newcounter.MainPage";
 
-            _typeTable = new global::System.Type[4];
-            _typeTable[0] = typeof(global::newcounter.info);
+            _typeTable = new global::System.Type[5];
+            _typeTable[0] = typeof(global::newcounter.agonia);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::newcounter.MainPage);
+            _typeTable[3] = typeof(global::newcounter.info);
+            _typeTable[4] = typeof(global::newcounter.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -177,8 +179,9 @@ namespace newcounter.newcounter_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_info() { return new global::newcounter.info(); }
-        private object Activate_3_MainPage() { return new global::newcounter.MainPage(); }
+        private object Activate_0_agonia() { return new global::newcounter.agonia(); }
+        private object Activate_3_info() { return new global::newcounter.info(); }
+        private object Activate_4_MainPage() { return new global::newcounter.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -190,9 +193,9 @@ namespace newcounter.newcounter_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  newcounter.info
+            case 0:   //  newcounter.agonia
                 userType = new global::newcounter.newcounter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_info;
+                userType.Activator = Activate_0_agonia;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -205,9 +208,16 @@ namespace newcounter.newcounter_XamlTypeInfo
                 xamlType = new global::newcounter.newcounter_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  newcounter.MainPage
+            case 3:   //  newcounter.info
                 userType = new global::newcounter.newcounter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_3_info;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  newcounter.MainPage
+                userType = new global::newcounter.newcounter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

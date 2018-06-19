@@ -1,4 +1,6 @@
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\App.xbf
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\agonia.xbf
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\info.xbf
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\MainPage.xbf
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\newcounter.xr.xml
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\newcounter.exe
@@ -8,6 +10,7 @@ C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\App
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Core\AppxManifest.xml
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Core\newcounter.exe
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\newcounter.build.appxrecipe
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Microsoft.Azure.Mobile.Client.dll
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Microsoft.CSharp.dll
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\System.ComponentModel.DataAnnotations.dll
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\System.Core.dll
@@ -22,6 +25,7 @@ C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Sys
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\System.Xml.dll
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\System.dll
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Microsoft.VisualBasic.dll
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\System.Collections.dll
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\System.Diagnostics.Tools.dll
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\System.Diagnostics.Tracing.dll
@@ -124,12 +128,20 @@ C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Sys
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\System.Xml.XmlSerializer.dll
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\App.g.i.cs
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\App.g.cs
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\agonia.g.i.cs
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\agonia.g.cs
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\info.g.i.cs
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\info.g.cs
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\MainPage.g.i.cs
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\MainPage.g.cs
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\App.xaml
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\agonia.xaml
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\info.xaml
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\MainPage.xaml
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\App.xbf
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\agonia.xbf
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\info.xbf
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\MainPage.xbf
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\newcounter.csproj.CoreCompileInputs.cache
@@ -199,6 +211,8 @@ C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\FxR
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\FxResources.System.Xml.XDocument.SR.resw
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\FxResources.System.Xml.XmlDocument.SR.resw
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\Microsoft.Azure.Mobile.Client\en-US\Microsoft.WindowsAzure.MobileServices.Resources.resw
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\newcounter.csproj.GenerateResource.Cache
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\priconfig.xml
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\priconfig.xml.intermediate
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\layout.resfiles
@@ -210,10 +224,6 @@ C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\pri
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\qualifiers.txt
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\Microsoft.Azure.Mobile.Client.pri.xml
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\newcounter.csprojResolveAssemblyReference.cache
-C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\info.xbf
-C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\info.g.i.cs
-C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\info.g.cs
-C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\info.xaml
-C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\info.xbf
