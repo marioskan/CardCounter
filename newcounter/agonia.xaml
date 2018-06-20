@@ -31,9 +31,11 @@
         <TextBox Name="sumagonia2" Text="0" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="35" IsReadOnly="True" BorderThickness="0"  />
         <TextBox Name="agoniateam1" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" InputScope="Number" FontSize="35" PlaceholderText="Enter score"/>
         <TextBox Name="agoniateam2" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" InputScope="Number" FontSize="35" PlaceholderText="Enter score"/>
-        <Button Name="add" Grid.Row="3" Grid.Column="0" FontSize="40" VerticalAlignment="Center"  Width="118" Grid.ColumnSpan="2"  HorizontalAlignment="Center" Click="add_Click">Add</Button>
-        <Button Name="undo" Grid.Row="4" FontSize="40" VerticalAlignment="Center"  Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Center" >Undo</Button>
-        <Button Name="clear"  Grid.Row="5" FontSize="40" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Center" Width="118" Click="clear_Click">Clear</Button>
+        <Button Name="add" Grid.Row="3" Grid.Column="0" FontSize="40" VerticalAlignment="Center"  Width="118" HorizontalAlignment="Center" Click="add_Click">Add</Button>
+        <Button Name="undo" Grid.Row="3" FontSize="40" VerticalAlignment="Center"   Grid.Column="1" HorizontalAlignment="Center" >Undo</Button>
+        <Button Name="clear"  Grid.Row="4" FontSize="40" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Center" Width="118" Click="clear_Click">Clear</Button>
         <TextBlock Name="result" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="40"/>
+        <Button Name="save" Grid.Row="5"  Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="118" FontSize="40" Click="save_Click">Save</Button>
+        <Button Name="load" Grid.Row="5"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="118" FontSize="40" Click="load_Click" >Load</Button>
     </Grid>
 </Page>

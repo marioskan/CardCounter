@@ -26,31 +26,6 @@ namespace newcounter
     /// </summary>
     public sealed partial class agonia : Page
     {
-        public agonia()
-        {
-            this.InitializeComponent();
-            Default_Load();
-        }
-
-        public async void Default_Load()
-        {
-            
-            try
-            {
-                var counterTable = App.MobileService.GetTable<newcountertable>();
-                var result = await counterTable.Where(x => x.id=="AG").ToListAsync();
-                var item = result.FirstOrDefault();
-                sumagonia1.Text = item.agoniateam1;
-                sumagonia2.Text = item.agoniateam2;
-
-
-            }
-            catch (Exception x)
-            {
-
-            }
-        }
-
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -88,13 +63,22 @@ namespace newcounter
             }
 
         }
-        
+        public agonia()
+        {
+            this.InitializeComponent();
+            
+        }
 
+      
+
+ 
+      
         private void clear_Click(object sender, RoutedEventArgs e)
         {
             sumagonia1.Text = "0";
             sumagonia2.Text = "0";
             result.Text = "";
+            
         }
         int sum1 = 0;
         int sum2 = 0;
@@ -133,21 +117,75 @@ namespace newcounter
             {
                 result.Text = "Ισοπαλία!";
             }
+            
+        }
+        
+        private void save_Click(object sender, RoutedEventArgs e)
+        {
+
+            
+            Sum();
             IMobileServiceTable<newcountertable> countertable = App.MobileService.GetTable<newcountertable>();
             try
             {
+                
                 newcountertable obj = new newcountertable();
                 obj.agoniateam1 = sumagonia1.Text;
                 obj.agoniateam2 = sumagonia2.Text;
-                obj.id = "AG";
-                countertable.InsertAsync(obj);
+                obj.id = "ag";
+                countertable.UpdateAsync(obj);
 
+                
             }
-            catch (Exception x )
+            catch (Exception x)
             {
 
             }
-        
+        }
+
+        private void load_Click(object sender, RoutedEventArgs e)
+        {
+            
+                Default_Load();
+            
+        }
+
+        public async void Default_Load()
+        {
+
+            try
+            {
+                var counterTable = App.MobileService.GetTable<newcountertable>();
+                var result = await counterTable.Where(x => x.id !="").ToListAsync();
+                var item = result.FirstOrDefault();
+                sumagonia1.Text = item.agoniateam1;
+                sumagonia2.Text = item.agoniateam2;
+                //sum1 = int.Parse(item.agoniateam1);
+                //sum2 = int.Parse(item.agoniateam2);
+            }
+            catch (Exception x)
+            {
+
+            }
+
+        }
+        public async void Sum()
+        {
+
+            try
+            {
+                var counterTable = App.MobileService.GetTable<newcountertable>();
+                var result = await counterTable.Where(x => x.id != "").ToListAsync();
+                var item = result.FirstOrDefault();
+               
+                sum1 = int.Parse(item.agoniateam1);
+                sum2 = int.Parse(item.agoniateam2);
+            }
+            catch (Exception x)
+            {
+
+            }
+
         }
     }
 }

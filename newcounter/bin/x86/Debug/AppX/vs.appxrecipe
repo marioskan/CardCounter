@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-19T19:45:31.488</Modified>
+      <Modified>2018-06-20T20:15:49.581</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\newcounter.exe">
       <PackagePath>entrypoint\newcounter.exe</PackagePath>
-      <Modified>2018-06-19T19:45:30.818</Modified>
+      <Modified>2018-06-20T20:15:49.065</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marios Kantharidis\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -560,11 +560,11 @@
     <AppxPackagedFile Include="C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-19T19:30:00.246</Modified>
+      <Modified>2018-06-20T18:53:55.653</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Core\newcounter.exe">
       <PackagePath>newcounter.exe</PackagePath>
-      <Modified>2018-06-19T19:45:31.481</Modified>
+      <Modified>2018-06-20T20:15:49.576</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
