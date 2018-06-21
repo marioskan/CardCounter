@@ -27,12 +27,12 @@
         </Grid.ColumnDefinitions>
         <TextBlock Text="Team 1" Grid.Column="0" Grid.Row="0" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" TextDecorations="Underline"/>
         <TextBlock Text="Team 2" Grid.Column="1" Grid.Row="0" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" TextDecorations="Underline"/>
-        <TextBox x:ConnectionId='1' Name="sumagonia1" Text="0" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="35" IsReadOnly="True"  BorderThickness="0" />
+        <TextBox x:ConnectionId='1' Name="sumagonia1" Text="0" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" FontSize="35" IsReadOnly="True"  BorderThickness="0" Margin="76,0,76,41" />
         <TextBox x:ConnectionId='2' Name="sumagonia2" Text="0" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="35" IsReadOnly="True" BorderThickness="0"  />
-        <TextBox x:ConnectionId='3' Name="agoniateam1" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" InputScope="Number" FontSize="35" PlaceholderText="Enter score"/>
-        <TextBox x:ConnectionId='4' Name="agoniateam2" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" InputScope="Number" FontSize="35" PlaceholderText="Enter score"/>
+        <TextBox x:ConnectionId='3' Name="agonia1" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" InputScope="Number" FontSize="35" PlaceholderText="Enter score"/>
+        <TextBox x:ConnectionId='4' Name="agonia2" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" InputScope="Number" FontSize="35" PlaceholderText="Enter score"/>
         <Button x:ConnectionId='5' Name="add" Grid.Row="3" Grid.Column="0" FontSize="40" VerticalAlignment="Center"  Width="118" HorizontalAlignment="Center"                  >Add</Button>
-        <Button x:ConnectionId='6' Name="undo" Grid.Row="3" FontSize="40" VerticalAlignment="Center"   Grid.Column="1" HorizontalAlignment="Center" >Undo</Button>
+        <Button x:ConnectionId='6' Name="undo" Grid.Row="3" FontSize="40" VerticalAlignment="Center"   Grid.Column="1" HorizontalAlignment="Center"                    >Undo</Button>
         <Button x:ConnectionId='7' Name="clear"  Grid.Row="4" FontSize="40" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Center" Width="118"                    >Clear</Button>
         <TextBlock x:ConnectionId='8' Name="result" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="40"/>
         <Button x:ConnectionId='9' Name="save" Grid.Row="5"  Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="118" FontSize="40"                   >Save</Button>

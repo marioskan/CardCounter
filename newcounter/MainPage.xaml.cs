@@ -76,5 +76,15 @@ namespace newcounter
         {
             this.Frame.Navigate(typeof(agonia));
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(agonia));
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(xeri));
+        }
     }
 }

@@ -47,10 +47,11 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Text" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="IsReadOnly" />
       <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="InputScope" />
       <RootProperty Name="PlaceholderText" />
     </RootType>
@@ -148,5 +149,6 @@
       <RootMethod Name="SetAccessibilityView" />
     </RootType>
     <RootType FullName="newcounter.MainPage" />
+    <RootType FullName="newcounter.xeri" />
   </Roots.RootTypes>
 </Roots>

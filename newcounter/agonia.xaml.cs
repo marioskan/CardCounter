@@ -78,33 +78,45 @@ namespace newcounter
             sumagonia1.Text = "0";
             sumagonia2.Text = "0";
             result.Text = "";
+            number1 = 0;
+            number2 = 0;
+            sum1 = 0;
+            sum2 = 0;
             
         }
         int sum1 = 0;
         int sum2 = 0;
         int number1 = 0;
         int number2 = 0;
+        int flag = 0;
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            if(agoniateam1.Text!=" " && agoniateam2.Text!=" ")
+            if (agonia1.Text != " " && agonia2.Text != " ")
             {
-                number1 = int.Parse(agoniateam1.Text);
-                number2 = int.Parse(agoniateam2.Text);
+                number1 = int.Parse(agonia1.Text);
+                number2 = int.Parse(agonia2.Text);
+                flag = 1;
             }
-            else if (agoniateam1.Text != " ")
+            else if (agonia1.Text != " ")
             {
-                number1 = int.Parse(agoniateam1.Text);
+                number1 = int.Parse(agonia1.Text);
+                flag = 1;
             }
-            else
+            else if (agonia2.Text != " ")
             {
-                number2 = int.Parse(agoniateam2.Text);
+                number2 = int.Parse(agonia2.Text);
+                flag = 1;
+            }
+            else if (agonia1.Text == " " && agonia2.Text ==" ")
+            {
+                flag = 0;
             }
             sum1 = sum1 + number1;
             sum2 = sum2 + number2;
             sumagonia1.Text = Convert.ToString(sum1);
             sumagonia2.Text = Convert.ToString(sum2);
-            agoniateam1.Text = "0";
-            agoniateam2.Text = "0";
+            agonia1.Text = "0";
+            agonia2.Text = "0";
             if(sum1>=51)
             {
                 result.Text = "Team 1 wins!";
@@ -119,7 +131,39 @@ namespace newcounter
             }
             
         }
+
+        private void undo_Click(object sender, RoutedEventArgs e)
+        {
+            if (flag == 1)
+            {
+                if (sumagonia1.Text != " ")
+                {
+                    sum1 = sum1 - number1;
+
+                    sumagonia1.Text = Convert.ToString(sum1);
+
+                }
+                else
+                {
+                    sumagonia1.Text = "0";
+                }
+                if (sumagonia2.Text != " ")
+                {
+
+                    sum2 = sum2 - number2;
+
+                    sumagonia2.Text = Convert.ToString(sum2);
+                }
+                else
+                {
+                    sumagonia2.Text = "0";
+                }
+                flag = 0;
+            }
+            
         
+        }
+
         private void save_Click(object sender, RoutedEventArgs e)
         {
 
@@ -160,8 +204,8 @@ namespace newcounter
                 var item = result.FirstOrDefault();
                 sumagonia1.Text = item.agoniateam1;
                 sumagonia2.Text = item.agoniateam2;
-                //sum1 = int.Parse(item.agoniateam1);
-                //sum2 = int.Parse(item.agoniateam2);
+                sum1 = int.Parse(sumagonia1.Text);
+                sum2 = int.Parse(sumagonia2.Text);
             }
             catch (Exception x)
             {
@@ -187,5 +231,7 @@ namespace newcounter
             }
 
         }
+
+        
     }
 }

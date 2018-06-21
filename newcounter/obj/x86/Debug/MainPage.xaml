@@ -191,9 +191,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Button x:ConnectionId='1'  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Width="150" Height="60" FontSize="22" MinWidth="150" MinHeight="60"                        >Αγωνία</Button>
-        <Button Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" Width="150" Height="60" FontSize="22" MinWidth="150" MinHeight="60">Δηλωτή</Button>
-        <Button Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" Width="150" Height="60" FontSize="22" MinWidth="150" MinHeight="60">Ξερή</Button>
-        <Button x:ConnectionId='2' Grid.Column="1" Grid.Row="11" HorizontalAlignment="Center" Width="150" Height="60" FontSize="22" MinWidth="150" MinHeight="60"                     >Info</Button>
+        <Button x:ConnectionId='2' Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" Width="150" Height="60" FontSize="22" MinWidth="150" MinHeight="60"                       >Δηλωτή</Button>
+        <Button x:ConnectionId='3' Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" Width="150" Height="60" FontSize="22" MinWidth="150" MinHeight="60"                       >Ξερή</Button>
+        <Button x:ConnectionId='4' Grid.Column="1" Grid.Row="11" HorizontalAlignment="Center" Width="150" Height="60" FontSize="22" MinWidth="150" MinHeight="60"                     >Info</Button>
     </Grid>
 
 
