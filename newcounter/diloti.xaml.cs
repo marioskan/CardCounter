@@ -22,9 +22,8 @@ namespace newcounter
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class xeri : Page
+    public sealed partial class diloti : Page
     {
-
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
@@ -61,122 +60,120 @@ namespace newcounter
             }
 
         }
-
-        public xeri()
+        public diloti()
         {
             this.InitializeComponent();
-        }
-
-        private void clearxeri_Click(object sender, RoutedEventArgs e)
-        {
-            sumxeri1.Text = "0";
-            sumxeri2.Text = "0";
-            resultxeri.Text = "";
-            number1 = 0;
-            number2 = 0;
-            sum1 = 0;
-            sum2 = 0;
-            xeri1.IsEnabled = true;
-            xeri2.IsEnabled = true;
         }
         int sum1 = 0;
         int sum2 = 0;
         int number1 = 0;
         int number2 = 0;
         int flag = 0;
-        private void addxeri_Click(object sender, RoutedEventArgs e)
+        private void adddiloti_Click(object sender, RoutedEventArgs e)
         {
-            if (xeri1.Text != " " && xeri2.Text != " ")
+            if (diloti1.Text != " " && diloti2.Text != " ")
             {
-                number1 = int.Parse(xeri1.Text);
-                number2 = int.Parse(xeri2.Text);
+                number1 = int.Parse(diloti1.Text);
+                number2 = int.Parse(diloti2.Text);
                 flag = 1;
             }
-            else if (xeri1.Text != " ")
+            else if (diloti1.Text != " ")
             {
-                number1 = int.Parse(xeri1.Text);
+                number1 = int.Parse(diloti1.Text);
                 flag = 1;
             }
-            else if (xeri2.Text != " ")
+            else if (diloti2.Text != " ")
             {
-                number2 = int.Parse(xeri2.Text);
+                number2 = int.Parse(diloti2.Text);
                 flag = 1;
             }
-            else if (xeri1.Text == " " && xeri2.Text == " ")
+            else if (diloti1.Text == " " && diloti2.Text == " ")
             {
                 flag = 0;
             }
             sum1 = sum1 + number1;
             sum2 = sum2 + number2;
-            sumxeri1.Text = Convert.ToString(sum1);
-            sumxeri2.Text = Convert.ToString(sum2);
-            xeri1.Text = "0";
-            xeri2.Text = "0";
-            if (sum1 >= 51)
+            sumdiloti1.Text = Convert.ToString(sum1);
+            sumdiloti2.Text = Convert.ToString(sum2);
+            diloti1.Text = "0";
+            diloti2.Text = "0";
+            if (sum1 >= 61)
             {
-                resultxeri.Text = "Team 1 wins!";
-                xeri1.IsEnabled = false;
-                xeri2.IsEnabled = false;
+                resultdiloti.Text = "Team 1 wins!";
+                diloti1.IsEnabled = false;
+                diloti2.IsEnabled = false;
             }
-            else if (sum2 >= 51)
+            else if (sum2 >= 61)
             {
-                resultxeri.Text = "Team 2 wins!";
-                xeri1.IsEnabled = false;
-                xeri2.IsEnabled = false;
+                resultdiloti.Text = "Team 2 wins!";
+                diloti1.IsEnabled = false;
+                diloti2.IsEnabled = false;
             }
-            else if (sum1 == 51 && sum2 == 51)
+            else if (sum1 == 61 && sum2 == 61)
             {
-                resultxeri.Text = "Ισοπαλία!";
-                xeri1.IsEnabled = false;
-                xeri2.IsEnabled = false;
+                resultdiloti.Text = "Ισοπαλία!";
+                diloti1.IsEnabled = false;
+                diloti2.IsEnabled = false;
             }
         }
 
-        private void undoxeri_Click(object sender, RoutedEventArgs e)
+        private void undodiloti_Click(object sender, RoutedEventArgs e)
         {
             if (flag == 1)
             {
-                if (sumxeri1.Text != " ")
+                if (sumdiloti1.Text != " ")
                 {
                     sum1 = sum1 - number1;
 
-                    sumxeri1.Text = Convert.ToString(sum1);
+                    sumdiloti1.Text = Convert.ToString(sum1);
 
                 }
                 else
                 {
-                    sumxeri1.Text = "0";
+                    sumdiloti1.Text = "0";
                 }
-                if (sumxeri2.Text != " ")
+                if (sumdiloti2.Text != " ")
                 {
 
                     sum2 = sum2 - number2;
 
-                    sumxeri2.Text = Convert.ToString(sum2);
+                    sumdiloti2.Text = Convert.ToString(sum2);
                 }
                 else
                 {
-                    sumxeri2.Text = "0";
+                    sumdiloti2.Text = "0";
                 }
                 flag = 0;
             }
-
-
-
         }
 
-        private void savexeri_Click(object sender, RoutedEventArgs e)
+        private void cleardiloti_Click(object sender, RoutedEventArgs e)
+        {
+            sumdiloti1.Text = "0";
+            sumdiloti2.Text = "0";
+            resultdiloti.Text = "";
+            number1 = 0;
+            number2 = 0;
+            sum1 = 0;
+            sum2 = 0;
+            diloti1.IsEnabled = true;
+            diloti2.IsEnabled = true;
+        }
+
+       
+
+        private void savediloti_Click(object sender, RoutedEventArgs e)
         {
             Sum();
             IMobileServiceTable<newcountertable> countertable = App.MobileService.GetTable<newcountertable>();
             try
             {
 
-                newcountertable obj = new newcountertable();
-                obj.xeriteam1 = sumxeri1.Text;
-                obj.xeriteam2 = sumxeri2.Text;
-                obj.id = "xe";
-                countertable.UpdateAsync(obj);
+                newcountertable obj2 = new newcountertable();
+                obj2.dilotiteam1 = sumdiloti1.Text;
+                obj2.dilotiteam2 = sumdiloti2.Text;
+                obj2.id = "di";
+                countertable.UpdateAsync(obj2);
 
 
             }
@@ -192,12 +189,12 @@ namespace newcounter
             try
             {
                 var counterTable = App.MobileService.GetTable<newcountertable>();
-                var result = await counterTable.Where(x => x.id == "xe").ToListAsync();
+                var result = await counterTable.Where(x => x.id == "di").ToListAsync();
                 var item = result.FirstOrDefault();
-                sumxeri1.Text = item.xeriteam1;
-                sumxeri2.Text = item.xeriteam2;
-                sum1 = int.Parse(sumxeri1.Text);
-                sum2 = int.Parse(sumxeri2.Text);
+                sumdiloti1.Text = item.dilotiteam1;
+                sumdiloti2.Text = item.dilotiteam2;
+                sum1 = int.Parse(sumdiloti1.Text);
+                sum2 = int.Parse(sumdiloti2.Text);
             }
             catch (Exception x)
             {
@@ -211,11 +208,11 @@ namespace newcounter
             try
             {
                 var counterTable = App.MobileService.GetTable<newcountertable>();
-                var result = await counterTable.Where(x => x.id == "xe").ToListAsync();
+                var result = await counterTable.Where(x => x.id == "di").ToListAsync();
                 var item = result.FirstOrDefault();
 
-                sum1 = int.Parse(item.xeriteam1);
-                sum2 = int.Parse(item.xeriteam2);
+                sum1 = int.Parse(item.dilotiteam1);
+                sum2 = int.Parse(item.dilotiteam2);
             }
             catch (Exception x)
             {
@@ -224,11 +221,13 @@ namespace newcounter
 
         }
 
-        private void loadxeri_Click(object sender, RoutedEventArgs e)
+        private void loaddiloti_Click(object sender, RoutedEventArgs e)
         {
             Default_Load();
         }
+
+
+
+
     }
 }
-        
- 

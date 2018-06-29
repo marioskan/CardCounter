@@ -82,7 +82,9 @@ namespace newcounter
             number2 = 0;
             sum1 = 0;
             sum2 = 0;
-            
+            agonia1.IsEnabled = true;
+            agonia2.IsEnabled = true;
+
         }
         int sum1 = 0;
         int sum2 = 0;
@@ -119,15 +121,21 @@ namespace newcounter
             agonia2.Text = "0";
             if(sum1>=51)
             {
-                result.Text = "Team 1 wins!";
+                result.Text = "Team 2 wins!";
+                agonia1.IsEnabled = false;
+                agonia2.IsEnabled = false;
             }
             else if (sum2>=51)
             {
-                result.Text = "Team 2 wins!";
+                result.Text = "Team 1 wins!";
+                agonia1.IsEnabled = false;
+                agonia2.IsEnabled = false;
             }
             else if (sum1==51 && sum2==51)
             {
                 result.Text = "Ισοπαλία!";
+                agonia1.IsEnabled = false;
+                agonia2.IsEnabled = false;
             }
             
         }

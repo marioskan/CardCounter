@@ -68,6 +68,7 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="newcounter.agonia" />
+    <RootType FullName="newcounter.diloti" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
     </RootType>
