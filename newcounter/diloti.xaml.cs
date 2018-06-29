@@ -169,11 +169,11 @@ namespace newcounter
             try
             {
 
-                newcountertable obj2 = new newcountertable();
-                obj2.dilotiteam1 = sumdiloti1.Text;
-                obj2.dilotiteam2 = sumdiloti2.Text;
-                obj2.id = "di";
-                countertable.UpdateAsync(obj2);
+                newcountertable obj = new newcountertable();
+                obj.dilotiteam1 = sumdiloti1.Text;
+                obj.dilotiteam2 = sumdiloti2.Text;
+                obj.id = "di";
+                countertable.UpdateAsync(obj);
 
 
             }
