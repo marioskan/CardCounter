@@ -26,6 +26,9 @@ namespace newcounter
     {
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            base.OnNavigatedTo(e);
+            var parameters = (move)e.Parameter;
+            cheat1.Text = parameters.username;
             Frame rootFrame = Window.Current.Content as Frame;
 
             string myPages = "";
@@ -58,12 +61,15 @@ namespace newcounter
                 SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
                     AppViewBackButtonVisibility.Collapsed;
             }
-
+            Default_Load();
         }
         public diloti()
         {
             this.InitializeComponent();
         }
+
+        
+
         int sum1 = 0;
         int sum2 = 0;
         int number1 = 0;
@@ -71,32 +77,36 @@ namespace newcounter
         int flag = 0;
         private void adddiloti_Click(object sender, RoutedEventArgs e)
         {
-            if (diloti1.Text != " " && diloti2.Text != " ")
+
+            if (int.TryParse(diloti1.Text, out number1))
             {
-                number1 = int.Parse(diloti1.Text);
-                number2 = int.Parse(diloti2.Text);
                 flag = 1;
             }
-            else if (diloti1.Text != " ")
+            else
             {
-                number1 = int.Parse(diloti1.Text);
-                flag = 1;
-            }
-            else if (diloti2.Text != " ")
-            {
-                number2 = int.Parse(diloti2.Text);
-                flag = 1;
-            }
-            else if (diloti1.Text == " " && diloti2.Text == " ")
-            {
+                diloti1.Text = "Δώστε έναν έγκυρο αριθμό";
                 flag = 0;
+                return;
             }
+
+            if (int.TryParse(diloti2.Text, out number2))
+            {
+                flag = 1;
+            }
+            else
+            {
+                diloti2.Text = "Δώστε έναν έγκυρο αριθμό";
+                flag = 0;
+                return;
+            }
+
             sum1 = sum1 + number1;
             sum2 = sum2 + number2;
             sumdiloti1.Text = Convert.ToString(sum1);
             sumdiloti2.Text = Convert.ToString(sum2);
             diloti1.Text = "0";
             diloti2.Text = "0";
+
             if (sum1 >= 61)
             {
                 resultdiloti.Text = "Team 1 wins!";
@@ -109,7 +119,7 @@ namespace newcounter
                 diloti1.IsEnabled = false;
                 diloti2.IsEnabled = false;
             }
-            else if (sum1 == 61 && sum2 == 61)
+            else if (sum1 == 51 && sum2 == 51)
             {
                 resultdiloti.Text = "Ισοπαλία!";
                 diloti1.IsEnabled = false;
@@ -121,23 +131,23 @@ namespace newcounter
         {
             if (flag == 1)
             {
-                if (sumdiloti1.Text != " ")
+                if (!string.IsNullOrEmpty(sumdiloti1.Text))
                 {
                     sum1 = sum1 - number1;
 
-                    sumdiloti1.Text = Convert.ToString(sum1);
+                    sumdiloti1.Text = sum1.ToString();
 
                 }
                 else
                 {
                     sumdiloti1.Text = "0";
                 }
-                if (sumdiloti2.Text != " ")
+                if (!string.IsNullOrEmpty(sumdiloti2.Text))
                 {
 
                     sum2 = sum2 - number2;
 
-                    sumdiloti2.Text = Convert.ToString(sum2);
+                    sumdiloti2.Text = sum2.ToString();
                 }
                 else
                 {
@@ -169,10 +179,12 @@ namespace newcounter
             try
             {
 
-                newcountertable obj = new newcountertable();
-                obj.dilotiteam1 = sumdiloti1.Text;
-                obj.dilotiteam2 = sumdiloti2.Text;
-                obj.id = "di";
+                newcountertable obj = new newcountertable
+                {
+                    dilotiteam1 = sumdiloti1.Text,
+                    dilotiteam2 = sumdiloti2.Text,
+                    id = cheat1.Text,
+                };
                 countertable.UpdateAsync(obj);
 
 
@@ -189,12 +201,26 @@ namespace newcounter
             try
             {
                 var counterTable = App.MobileService.GetTable<newcountertable>();
-                var result = await counterTable.Where(x => x.id == "di").ToListAsync();
+                var result = await counterTable.Where(x => x.id == cheat1.Text).ToListAsync();
                 var item = result.FirstOrDefault();
-                sumdiloti1.Text = item.dilotiteam1;
-                sumdiloti2.Text = item.dilotiteam2;
-                sum1 = int.Parse(sumdiloti1.Text);
-                sum2 = int.Parse(sumdiloti2.Text);
+                if (result.Count == 0)
+                {
+                    newcountertable obj = new newcountertable
+                    {
+                        dilotiteam1 = sumdiloti1.Text,
+                        dilotiteam2 = sumdiloti2.Text,
+                        id = cheat1.Text,
+                    };
+                    await counterTable.InsertAsync(obj);
+                }
+                else
+                {
+                    sumdiloti1.Text = item.dilotiteam1;
+                    sumdiloti2.Text = item.dilotiteam2;
+                    sum1 = int.Parse(sumdiloti1.Text);
+                    sum2 = int.Parse(sumdiloti2.Text);
+                }
+           
             }
             catch (Exception x)
             {

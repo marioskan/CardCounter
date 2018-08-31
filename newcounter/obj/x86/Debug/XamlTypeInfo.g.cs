@@ -132,23 +132,25 @@ namespace newcounter.newcounter_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[7];
+            _typeNameTable = new string[8];
             _typeNameTable[0] = "newcounter.agonia";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "newcounter.diloti";
             _typeNameTable[4] = "newcounter.info";
             _typeNameTable[5] = "newcounter.MainPage";
-            _typeNameTable[6] = "newcounter.xeri";
+            _typeNameTable[6] = "newcounter.usermain";
+            _typeNameTable[7] = "newcounter.xeri";
 
-            _typeTable = new global::System.Type[7];
+            _typeTable = new global::System.Type[8];
             _typeTable[0] = typeof(global::newcounter.agonia);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::newcounter.diloti);
             _typeTable[4] = typeof(global::newcounter.info);
             _typeTable[5] = typeof(global::newcounter.MainPage);
-            _typeTable[6] = typeof(global::newcounter.xeri);
+            _typeTable[6] = typeof(global::newcounter.usermain);
+            _typeTable[7] = typeof(global::newcounter.xeri);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -187,7 +189,8 @@ namespace newcounter.newcounter_XamlTypeInfo
         private object Activate_3_diloti() { return new global::newcounter.diloti(); }
         private object Activate_4_info() { return new global::newcounter.info(); }
         private object Activate_5_MainPage() { return new global::newcounter.MainPage(); }
-        private object Activate_6_xeri() { return new global::newcounter.xeri(); }
+        private object Activate_6_usermain() { return new global::newcounter.usermain(); }
+        private object Activate_7_xeri() { return new global::newcounter.xeri(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -235,9 +238,16 @@ namespace newcounter.newcounter_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 6:   //  newcounter.xeri
+            case 6:   //  newcounter.usermain
                 userType = new global::newcounter.newcounter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_xeri;
+                userType.Activator = Activate_6_usermain;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  newcounter.xeri
+                userType = new global::newcounter.newcounter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_xeri;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

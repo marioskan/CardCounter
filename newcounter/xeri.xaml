@@ -37,5 +37,8 @@
         <TextBlock Name="resultxeri" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="40"/>
         <Button Name="savexeri" Grid.Row="5"  Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="118" FontSize="40" Click="savexeri_Click"  >Save</Button>
         <Button Name="loadxeri" Grid.Row="5"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="118" FontSize="40" Click="loadxeri_Click"   >Load</Button>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35">Logged as:
+        </TextBlock>
+        <TextBlock Name="cheat1" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35"></TextBlock>
     </Grid>
 </Page>

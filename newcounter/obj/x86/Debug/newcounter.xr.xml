@@ -40,8 +40,8 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="TextDecorations" />
       <RootProperty Name="Name" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Inlines" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Name" />
@@ -50,10 +50,10 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="IsReadOnly" />
       <RootProperty Name="BorderThickness" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="InputScope" />
       <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Name" />
@@ -150,6 +150,7 @@
       <RootMethod Name="SetAccessibilityView" />
     </RootType>
     <RootType FullName="newcounter.MainPage" />
+    <RootType FullName="newcounter.usermain" />
     <RootType FullName="newcounter.xeri" />
   </Roots.RootTypes>
 </Roots>

@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="newcounter.usermain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:newcounter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid RequestedTheme="Default" Visibility="Visible">
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/marble.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Center">Enter username:</TextBlock>
+        <TextBox x:ConnectionId='1' Name="name" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Center" PlaceholderText="Enter here"  />
+        <Button x:ConnectionId='2' Grid.Column="1" Grid.Row="2" Width="118" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Center"                     >Go</Button>
+    </Grid>
+</Page>
+

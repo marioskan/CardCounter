@@ -30,6 +30,11 @@ namespace newcounter
             Frame rootFrame = Window.Current.Content as Frame;
 
             string myPages = "";
+            base.OnNavigatedTo(e);
+            var paramteters = (move)e.Parameter;
+            cheat1.Text = paramteters.username;
+
+
             foreach (PageStackEntry page in rootFrame.BackStack)
             {
                 myPages += page.SourcePageType.ToString() + "\n";
@@ -59,6 +64,7 @@ namespace newcounter
                 SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
                     AppViewBackButtonVisibility.Collapsed;
             }
+            Default_Load();
 
         }
 
@@ -86,41 +92,44 @@ namespace newcounter
         int flag = 0;
         private void addxeri_Click(object sender, RoutedEventArgs e)
         {
-            if (xeri1.Text != " " && xeri2.Text != " ")
+            if (int.TryParse(xeri1.Text, out number1))
             {
-                number1 = int.Parse(xeri1.Text);
-                number2 = int.Parse(xeri2.Text);
                 flag = 1;
             }
-            else if (xeri1.Text != " ")
+            else
             {
-                number1 = int.Parse(xeri1.Text);
-                flag = 1;
-            }
-            else if (xeri2.Text != " ")
-            {
-                number2 = int.Parse(xeri2.Text);
-                flag = 1;
-            }
-            else if (xeri1.Text == " " && xeri2.Text == " ")
-            {
+                xeri1.Text = "Δώστε έναν έγκυρο αριθμό";
                 flag = 0;
+                return;
             }
+
+            if (int.TryParse(xeri2.Text, out number2))
+            {
+                flag = 1;
+            }
+            else
+            {
+                xeri2.Text = "Δώστε έναν έγκυρο αριθμό";
+                flag = 0;
+                return;
+            }
+
             sum1 = sum1 + number1;
             sum2 = sum2 + number2;
             sumxeri1.Text = Convert.ToString(sum1);
             sumxeri2.Text = Convert.ToString(sum2);
             xeri1.Text = "0";
             xeri2.Text = "0";
+
             if (sum1 >= 51)
             {
-                resultxeri.Text = "Team 1 wins!";
+                resultxeri.Text = "Team 2 wins!";
                 xeri1.IsEnabled = false;
                 xeri2.IsEnabled = false;
             }
             else if (sum2 >= 51)
             {
-                resultxeri.Text = "Team 2 wins!";
+                resultxeri.Text = "Team 1 wins!";
                 xeri1.IsEnabled = false;
                 xeri2.IsEnabled = false;
             }
@@ -136,23 +145,23 @@ namespace newcounter
         {
             if (flag == 1)
             {
-                if (sumxeri1.Text != " ")
+                if (!string.IsNullOrEmpty(sumxeri1.Text))
                 {
                     sum1 = sum1 - number1;
 
-                    sumxeri1.Text = Convert.ToString(sum1);
+                    sumxeri1.Text = sum1.ToString();
 
                 }
                 else
                 {
                     sumxeri1.Text = "0";
                 }
-                if (sumxeri2.Text != " ")
+                if (!string.IsNullOrEmpty(sumxeri2.Text))
                 {
 
                     sum2 = sum2 - number2;
 
-                    sumxeri2.Text = Convert.ToString(sum2);
+                    sumxeri2.Text = sum2.ToString();
                 }
                 else
                 {
@@ -175,7 +184,7 @@ namespace newcounter
                 newcountertable obj = new newcountertable();
                 obj.xeriteam1 = sumxeri1.Text;
                 obj.xeriteam2 = sumxeri2.Text;
-                obj.id = "xe";
+                obj.id = cheat1.Text;
                 countertable.UpdateAsync(obj);
 
 
@@ -192,8 +201,21 @@ namespace newcounter
             try
             {
                 var counterTable = App.MobileService.GetTable<newcountertable>();
-                var result = await counterTable.Where(x => x.id == "xe").ToListAsync();
+                var result = await counterTable.Where(x => x.id == cheat1.Text).ToListAsync();
                 var item = result.FirstOrDefault();
+                if(result.Count==0)
+                {
+                    newcountertable obj = new newcountertable
+                    {
+                     xeriteam1 = sumxeri1.Text,
+                    xeriteam2 = sumxeri2.Text,
+                    id = cheat1.Text
+                    
+                };
+                await counterTable.InsertAsync(obj);
+
+
+            }
                 sumxeri1.Text = item.xeriteam1;
                 sumxeri2.Text = item.xeriteam2;
                 sum1 = int.Parse(sumxeri1.Text);

@@ -194,6 +194,9 @@
         <Button Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" Width="150" Height="60" FontSize="22" MinWidth="150" MinHeight="60" Click="Button_Click_2">Δηλωτή</Button>
         <Button Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" Width="150" Height="60" FontSize="22" MinWidth="150" MinHeight="60" Click="Button_Click_3">Ξερή</Button>
         <Button Grid.Column="1" Grid.Row="11" HorizontalAlignment="Center" Width="150" Height="60" FontSize="22" MinWidth="150" MinHeight="60" Click="Button_Click">Info</Button>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35">Logged as:</TextBlock>
+        <TextBlock Name="cheat" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35"></TextBlock>
+
     </Grid>
 
 

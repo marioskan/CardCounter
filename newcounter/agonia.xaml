@@ -20,6 +20,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -27,15 +28,18 @@
         </Grid.ColumnDefinitions>
         <TextBlock Text="Team 1" Grid.Column="0" Grid.Row="0" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" TextDecorations="Underline"/>
         <TextBlock Text="Team 2" Grid.Column="1" Grid.Row="0" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" TextDecorations="Underline"/>
-        <TextBox Name="sumagonia1" Text="0" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" FontSize="35" IsReadOnly="True"  BorderThickness="0" Margin="76,0,76,41" />
+        <TextBox Name="sumagonia1" Text="0" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" FontSize="35" IsReadOnly="True"  BorderThickness="0"  />
         <TextBox Name="sumagonia2" Text="0" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="35" IsReadOnly="True" BorderThickness="0"  />
         <TextBox Name="agonia1" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" InputScope="Number" FontSize="35" PlaceholderText="Enter score"/>
         <TextBox Name="agonia2" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" InputScope="Number" FontSize="35" PlaceholderText="Enter score"/>
         <Button Name="add" Grid.Row="3" Grid.Column="0" FontSize="40" VerticalAlignment="Center"  Width="118" HorizontalAlignment="Center" Click="add_Click">Add</Button>
         <Button Name="undo" Grid.Row="3" FontSize="40" VerticalAlignment="Center"   Grid.Column="1" HorizontalAlignment="Center" Click="undo_Click" >Undo</Button>
         <Button Name="clear"  Grid.Row="4" FontSize="40" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Center" Width="118" Click="clear_Click">Clear</Button>
-        <TextBlock Name="result" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="40"/>
+        <TextBlock Name="result" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="40"/>
         <Button Name="save" Grid.Row="5"  Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="118" FontSize="40" Click="save_Click">Save</Button>
         <Button Name="load" Grid.Row="5"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="118" FontSize="40" Click="load_Click" >Load</Button>
+        <TextBlock Name="cheat1" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35">Logged as:
+        </TextBlock>
     </Grid>
 </Page>

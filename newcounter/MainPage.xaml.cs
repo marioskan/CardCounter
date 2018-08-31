@@ -34,11 +34,16 @@ namespace newcounter
         {
             this.Frame.Navigate(typeof(info));
         }
+      
+        
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
-
+            base.OnNavigatedTo(e);
+            var parameters = (move)e.Parameter;
+            cheat.Text = parameters.username;
+            
             string myPages = "";
             foreach (PageStackEntry page in rootFrame.BackStack)
             {
@@ -71,20 +76,30 @@ namespace newcounter
             }
 
         }
+       
+      
+      
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(agonia));
+            move user = new move();
+            user.username = cheat.Text;
+            this.Frame.Navigate(typeof(agonia),user);
+
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(diloti));
+            move user = new move();
+            user.username = cheat.Text;
+            this.Frame.Navigate(typeof(diloti),user);
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(xeri));
+            move user = new move();
+            user.username = cheat.Text;
+            this.Frame.Navigate(typeof(xeri),user);
         }
     }
 }

@@ -16,5 +16,6 @@ namespace newcounter
         public string xeriteam2 { get; set; }
         public string dilotiteam1 { get; set; }
         public string dilotiteam2 { get; set; }
+        
     }
 }

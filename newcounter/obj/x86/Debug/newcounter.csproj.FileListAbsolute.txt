@@ -237,3 +237,8 @@ C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\dil
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\diloti.g.cs
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\diloti.xaml
 C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\diloti.xbf
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\usermain.g.i.cs
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\usermain.g.cs
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\usermain.xaml
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\obj\x86\Debug\usermain.xbf
+C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\usermain.xbf

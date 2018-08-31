@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-29T17:35:08.634</Modified>
+      <Modified>2018-08-31T18:24:30.701</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\newcounter.exe">
       <PackagePath>entrypoint\newcounter.exe</PackagePath>
-      <Modified>2018-06-29T17:35:08.115</Modified>
+      <Modified>2018-08-31T18:24:30.281</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marios Kantharidis\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -551,7 +551,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\newcounter.xr.xml">
       <PackagePath>newcounter.xr.xml</PackagePath>
-      <Modified>2018-06-29T16:18:13.657</Modified>
+      <Modified>2018-08-31T17:33:13.757</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -560,11 +560,11 @@
     <AppxPackagedFile Include="C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-29T16:27:51.830</Modified>
+      <Modified>2018-08-31T18:21:37.241</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marios Kantharidis\source\repos\newcounter\newcounter\bin\x86\Debug\Core\newcounter.exe">
       <PackagePath>newcounter.exe</PackagePath>
-      <Modified>2018-06-29T17:35:08.630</Modified>
+      <Modified>2018-08-31T18:24:30.698</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

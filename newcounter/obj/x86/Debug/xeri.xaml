@@ -37,6 +37,9 @@
         <TextBlock x:ConnectionId='8' Name="resultxeri" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="40"/>
         <Button x:ConnectionId='9' Name="savexeri" Grid.Row="5"  Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="118" FontSize="40"                         >Save</Button>
         <Button x:ConnectionId='10' Name="loadxeri" Grid.Row="5"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="118" FontSize="40"                          >Load</Button>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35">Logged as:
+        </TextBlock>
+        <TextBlock x:ConnectionId='11' Name="cheat1" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35"></TextBlock>
     </Grid>
 </Page>
 
