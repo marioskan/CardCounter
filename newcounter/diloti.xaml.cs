@@ -14,6 +14,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
+
+
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -172,8 +175,9 @@ namespace newcounter
 
        
 
-        private void savediloti_Click(object sender, RoutedEventArgs e)
+        private async void savediloti_ClickAsync(object sender, RoutedEventArgs e)
         {
+            ring.IsActive = true;
             Sum();
             IMobileServiceTable<newcountertable> countertable = App.MobileService.GetTable<newcountertable>();
             try
@@ -185,7 +189,7 @@ namespace newcounter
                     dilotiteam2 = sumdiloti2.Text,
                     id = cheat1.Text,
                 };
-                countertable.UpdateAsync(obj);
+                await countertable.UpdateAsync(obj);
 
 
             }
@@ -193,6 +197,11 @@ namespace newcounter
             {
 
             }
+            for (int i=5;i>=1; i--)
+            {
+                await Task.Delay(200);
+            }
+            ring.IsActive = false;
         }
 
         public async void Default_Load()

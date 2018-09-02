@@ -29,5 +29,7 @@
         <TextBlock Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Center">Enter username:</TextBlock>
         <TextBox Name="name" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Center" PlaceholderText="Enter here"  />
         <Button Grid.Column="1" Grid.Row="2" Width="118" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="Button_Click">Go</Button>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" FontSize="35" VerticalAlignment="Bottom" HorizontalAlignment="Center">Username is unique</TextBlock>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" FontSize="35" HorizontalAlignment="Center">for each game</TextBlock>
     </Grid>
 </Page>

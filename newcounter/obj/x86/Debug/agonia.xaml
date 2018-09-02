@@ -39,6 +39,9 @@
         <Button x:ConnectionId='9' Name="save" Grid.Row="5"  Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="118" FontSize="40"                   >Save</Button>
         <Button x:ConnectionId='10' Name="load" Grid.Row="5"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="118" FontSize="40"                    >Load</Button>
         <TextBlock x:ConnectionId='11' Name="cheat1" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35">Logged as:
+        </TextBlock>
+        <ProgressRing x:ConnectionId='12' Name="ring1" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" FontSize="24"></ProgressRing>
     </Grid>
 </Page>
 

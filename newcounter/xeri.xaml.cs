@@ -176,6 +176,7 @@ namespace newcounter
 
         private void savexeri_Click(object sender, RoutedEventArgs e)
         {
+            ring2.IsActive = true;
             Sum();
             IMobileServiceTable<newcountertable> countertable = App.MobileService.GetTable<newcountertable>();
             try
@@ -193,6 +194,7 @@ namespace newcounter
             {
 
             }
+            ring2.IsActive = false;
         }
 
         public async void Default_Load()

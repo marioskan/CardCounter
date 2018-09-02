@@ -41,5 +41,6 @@
         <TextBlock Name="cheat1" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35"></TextBlock>
         <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="14" FontSize="35">Logged as:
         </TextBlock>
+        <ProgressRing Name="ring1" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" FontSize="24"></ProgressRing>
     </Grid>
 </Page>

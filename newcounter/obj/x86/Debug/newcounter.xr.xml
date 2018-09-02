@@ -67,6 +67,10 @@
       <RootProperty Name="MinHeight" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
+      <RootProperty Name="Name" />
+      <RootProperty Name="FontSize" />
+    </RootType>
     <RootType FullName="newcounter.agonia" />
     <RootType FullName="newcounter.diloti" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">

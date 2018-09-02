@@ -182,7 +182,7 @@ namespace newcounter
         private void save_Click(object sender, RoutedEventArgs e)
         {
 
-
+            ring1.IsActive = true;
             Sum();
             IMobileServiceTable<newcountertable> countertable = App.MobileService.GetTable<newcountertable>();
             try
@@ -202,6 +202,7 @@ namespace newcounter
             {
 
             }
+            ring1.IsActive = false;
         }
 
         private void load_Click(object sender, RoutedEventArgs e)

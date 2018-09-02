@@ -21,9 +21,9 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" Grid.Row="1">
-            <HyperlinkButton Content="Κανόνες Δηλωτής" HorizontalAlignment="Center" FontWeight="Bold" FontSize="24" NavigateUri="http://cardgamesgr.blogspot.com/2014/07/diloti.html"/>
-            <HyperlinkButton Content="Κανόνες Αγωνίας" HorizontalAlignment="Center" FontWeight="Bold" FontSize="24" NavigateUri="http://trapoyla.blogspot.com/2011/11/blog-post_04.html#axzz5HYziK1wD"/>
-            <HyperlinkButton Content="Κανόνες Ξερής" HorizontalAlignment="Center" FontWeight="Bold" FontSize="24" NavigateUri="http://trapoyla.blogspot.com/search/label/%CE%BE%CE%B5%CF%81%CE%B7#axzz5HYziK1wD"/>
+            <HyperlinkButton Content="Κανόνες Δηλωτής" HorizontalAlignment="Center" FontWeight="Bold" FontSize="24" NavigateUri="http://counterweb.azurewebsites.net/%CE%B4%CE%B7%CE%BB%CF%89%CF%84%CE%AE/"/>
+            <HyperlinkButton Content="Κανόνες Αγωνίας" HorizontalAlignment="Center" FontWeight="Bold" FontSize="24" NavigateUri="http://counterweb.azurewebsites.net/agonia/"/>
+            <HyperlinkButton Content="Κανόνες Ξερής" HorizontalAlignment="Center" FontWeight="Bold" FontSize="24" NavigateUri="http://counterweb.azurewebsites.net/%CE%BE%CE%B5%CF%81%CE%AE/"/>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="4">
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="102,0,102,0"><Run Text="App created by Marios Kantharidis"/></TextBlock>
